@@ -1,296 +1,322 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mentalidade Milionária • Página Oficial</title>
-
-<!-- ============================= -->
-<!-- TIKTOK PIXEL INSTALADO       -->
-<!-- ============================= -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject = t;
-  var ttq = w[t] = w[t] || [];
-  ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],
-  ttq.setAndDefer = function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
-  for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
-  ttq.instance = function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};
-  ttq.load = function(e,n){
-    var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
-    ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date,
-    ttq._o = ttq._o || {}, ttq._o[e] = n || {};
-    var o = document.createElement("script");
-    o.type = "text/javascript", o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t;
-    var a = document.getElementsByTagName("script")[0];
-    a.parentNode.insertBefore(o, a);
-  };
-}(window, document, 'ttq');
-
-ttq.load('D4FMUEBC77U4IAHDG62G');
-ttq.page();
-</script>
-
-<script>
-function trackClick(nomeBotao) {
-  ttq.track('ClickButton', {button_name: nomeBotao});
-}
-</script>
-
-<style>
-/* ============================= */
-/* VARIÁVEIS DO TEMA DOURADO MR  */
-/* ============================= */
-:root {
-  --gold: #d4af37;
-  --gold-light: #f6e27a;
-  --dark: #0a0a0a;
-  --dark2: #0f0f0f;
-  --text: #ffffff;
-  --text-sec: #cccccc;
-  --shadow: rgba(0,0,0,0.45);
-}
-
-/* ============================= */
-/* RESET E BASE */
-/* ============================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
-
-body {
-  background: url('https://i.imgur.com/FKqfH86.jpeg') no-repeat center center fixed;
-  background-size: cover;
-  color: var(--text);
-  overflow-x: hidden;
-}
-
-/* ============================= */
-/* CABEÇALHO + FOTO DE PERFIL */
-/* ============================= */
-header {
-  text-align: center;
-  padding: 35px 20px 10px;
-}
-
-.profile-img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 4px solid var(--gold-light);
-  box-shadow: 0 0 20px var(--gold);
-  object-fit: cover;
-  margin-bottom: 18px;
-}
-
-.logo-title {
-  font-size: 2rem;
-  font-weight: 900;
-  background: linear-gradient(90deg, var(--gold-light), var(--gold));
-  -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 15px var(--gold);
-}
-
-/* ============================= */
-/* HERO */
-/* ============================= */
-.hero {
-  text-align: center;
-  padding: 60px 20px 40px;
-  backdrop-filter: blur(4px);
-}
-
-.hero h1 {
-  font-size: 2.4rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, var(--gold-light), var(--gold));
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.hero p {
-  margin-top: 15px;
-  font-size: 1.1rem;
-  color: var(--text-sec);
-}
-
-.btn-main {
-  margin-top: 30px;
-  padding: 16px 36px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-  color: black;
-  background: linear-gradient(90deg, var(--gold-light), var(--gold));
-  box-shadow: 0 0 25px var(--gold);
-}
-
-/* ============================= */
-/* SEÇÕES */
-/* ============================= */
-section {
-  background: rgba(0,0,0,0.65);
-  margin: 45px auto;
-  max-width: 900px;
-  padding: 28px;
-  border-radius: 18px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.35);
-  border: 1px solid rgba(255,255,255,0.05);
-  backdrop-filter: blur(3px);
-}
-
-h2 {
-  font-size: 1.7rem;
-  font-weight: 700;
-  background: linear-gradient(90deg, var(--gold-light), var(--gold));
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-/* LISTAS */
-ul { list-style: none; margin-top: 14px; }
-ul li {
-  margin: 12px 0;
-  font-size: 1rem;
-  color: var(--text);
-  line-height: 1.5em;
-}
-ul li::before {
-  content: "⚡ ";
-  color: var(--gold-light);
-  font-weight: bold;
-}
-
-/* ============================= */
-/* IMAGENS DE RESULTADOS */
-/* ============================= */
-.result-img {
-  width: 100%;
-  border-radius: 14px;
-  margin-top: 18px;
-  box-shadow: 0 0 25px var(--shadow);
-}
-
-/* ============================= */
-/* PLANOS */
-/* ============================= */
-.card-plan {
-  background: rgba(0,0,0,0.5);
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 24px;
-  margin: 18px 0;
-  border-radius: 14px;
-  transition: 0.3s;
-}
-
-.card-plan:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 25px var(--gold);
-}
-
-.price {
-  font-size: 2rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, var(--gold-light), var(--gold));
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.btn-plan {
-  display: inline-block;
-  margin-top: 18px;
-  text-decoration: none;
-  padding: 14px 22px;
-  border-radius: 12px;
-  font-weight: bold;
-  background: linear-gradient(90deg, var(--gold-light), var(--gold));
-  color: #000;
-  box-shadow: 0 0 18px var(--gold);
-}
-.btn-plan:hover {opacity: .9;}
-
-</style>
+  <meta charset="UTF-8" />
+  <title>Viral Luxury Videos 4K Pack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg-main: #020716;
+      --bg-card: #050b1f;
+      --bg-card-soft: #081126;
+      --accent: #00c8ff;
+      --accent-soft: rgba(0, 200, 255, 0.15);
+      --gold: #f7c86a;
+      --text-main: #f5f7ff;
+      --text-soft: #b1b7d6;
+      --danger: #ff4b81;
+      --radius-xl: 18px;
+      --radius-lg: 14px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
+      --max-width: 980px;
+      --border-glow: 1px solid rgba(0, 200, 255, 0.45);
+      --glass: rgba(11, 20, 46, 0.75);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif; background: radial-gradient(circle at top, #00008b 0, #001f3f 45%, #000 90%); color: var(--text-main); min-height: 100vh; overflow-x: hidden; }
+    .cyber-bg { position: fixed; inset: 0; overflow: hidden; z-index: -1; background: radial-gradient(circle at top, #071535 0, #000 70%); }
+    .cyber-bg span { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: rgba(0, 200, 255, 0.8); box-shadow: 0 0 10px rgba(0, 200, 255, 0.7), 0 0 25px rgba(0, 200, 255, 0.4); animation: floatParticle 18s linear infinite; }
+    .cyber-bg span:nth-child(odd) { background: rgba(247, 200, 106, 0.9); box-shadow: 0 0 10px rgba(247, 200, 106, 0.8), 0 0 26px rgba(247, 200, 106, 0.4); }
+    @keyframes floatParticle { 0% { transform: translate3d(0, 0, 0) scale(0.9); opacity: 0; } 10% { opacity: 1; } 50% { transform: translate3d(120px, -220px, 0) scale(1.1); } 100% { transform: translate3d(-220px, -520px, 0) scale(0.9); opacity: 0; } }
+    .page { max-width: var(--max-width); margin: 32px auto 64px; padding: 0 16px 40px; position: relative; }
+    .timer-section { text-align: center; margin-bottom: 32px; }
+    .timer-above { font-size: 1.2rem; color: var(--danger); margin-bottom: 8px; animation: pulse 2s infinite; }
+    .timer { font-size: 2.5rem; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; animation: flash 1s infinite alternate; }
+    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
+    @keyframes flash { 0% { color: var(--gold); } 100% { color: #ffd700; } }
+    .headline { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin-bottom: 16px; text-align: center; animation: fadeIn 1s ease-in; }
+    .subheadline { font-size: 1.2rem; color: var(--text-soft); margin-bottom: 32px; text-align: center; animation: fadeIn 1.5s ease-in; }
+    @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+    .visual-proof { text-align: center; margin-bottom: 32px; }
+    .icons { display: flex; justify-content: center; gap: 16px; margin-top: 16px; }
+    .icon { width: 48px; height: 48px; transition: transform 0.3s; }
+    .icon:hover { transform: scale(1.1); }
+    .used-by { font-size: 0.9rem; color: var(--text-soft); text-align: center; margin-top: 8px; }
+    .benefits { list-style: none; margin-bottom: 32px; }
+    .benefit { font-size: 1.1rem; margin-bottom: 12px; position: relative; padding-left: 28px; animation: fadeIn 2s ease-in; }
+    .benefit:before { content: "✓"; position: absolute; left: 0; color: var(--gold); }
+    .price-anchor { text-align: center; margin-bottom: 24px; }
+    .old-price { font-size: 1.6rem; color: var(--text-soft); text-decoration: line-through; }
+    .new-price { font-size: 2.8rem; color: var(--gold); font-weight: 700; margin: 8px 0; }
+    .urgency { font-size: 1rem; color: var(--accent); margin-bottom: 24px; }
+    .buy-button { display: block; padding: 16px; background: linear-gradient(135deg, var(--accent), #00aaff); color: #fff; text-align: center; border-radius: 999px; font-weight: 700; font-size: 1.2rem; text-decoration: none; box-shadow: 0 0 20px rgba(0, 200, 255, 0.6); margin-bottom: 8px; transition: transform 0.3s; animation: pulse 2s infinite; }
+    .buy-button:hover { transform: scale(1.05); }
+    .sub-button { font-size: 0.9rem; color: var(--danger); text-align: center; margin-bottom: 32px; animation: pulse 2s infinite; }
+    .final-urgency { text-align: center; margin-bottom: 24px; font-size: 1.1rem; color: var(--text-soft); }
+    .repeat-button { display: block; padding: 16px; background: linear-gradient(135deg, var(--gold), #ffcc80); color: #000; text-align: center; border-radius: 999px; font-weight: 700; font-size: 1.2rem; text-decoration: none; box-shadow: 0 0 20px rgba(247, 200, 106, 0.6); margin-top: 16px; transition: transform 0.3s; animation: pulse 2s infinite; }
+    .repeat-button:hover { transform: scale(1.05); }
+    .footer { text-align: center; font-size: 0.8rem; color: var(--text-soft); margin-top: 48px; }
+    .notification { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.9); color: #fff; padding: 14px 24px; border-radius: 12px; font-size: 14px; z-index: 1000; opacity: 0; transition: opacity .4s; border-left: 4px solid var(--accent); max-width: 90%; animation: slideUp 0.5s ease-out forwards; }
+    .notification.show { opacity: 1; }
+    @keyframes slideUp { 0% { transform: translateY(100%); } 100% { transform: translateY(0); } }
+  </style>
 </head>
+<body onload="detectLanguage()">
+  <div class="cyber-bg">
+    <span style="top: 80%; left: 8%; animation-delay: 0s;"></span>
+    <span style="top: 60%; left: 22%; animation-delay: 3s;"></span>
+    <span style="top: 72%; left: 40%; animation-delay: 6s;"></span>
+    <span style="top: 85%; left: 58%; animation-delay: 1.5s;"></span>
+    <span style="top: 66%; left: 80%; animation-delay: 4.2s;"></span>
+    <span style="top: 40%; left: 12%; animation-delay: 7.3s;"></span>
+    <span style="top: 32%; left: 48%; animation-delay: 2.4s;"></span>
+    <span style="top: 18%; left: 76%; animation-delay: 5.1s;"></span>
+    <span style="top: 10%; left: 30%; animation-delay: 8.7s;"></span>
+    <span style="top: 5%; left: 55%; animation-delay: 10.2s;"></span>
+  </div>
+  <div class="page">
+    <div class="timer-section">
+      <div class="timer-above" id="timer_above">Oferta Relâmpago – Preço Aumenta em Breve</div>
+      <div class="timer" id="timer"></div>
+    </div>
+    <h1 class="headline" id="headline">Transforme Vídeos Virais de Luxo em Renda</h1>
+    <p class="subheadline" id="subheadline">Sem Aparecer. Sem Experiência. Apenas Conteúdo Viral. Aproveite esta oportunidade única antes que expire e transforme sua presença online em uma máquina de dinheiro!</p>
 
-<body>
+    <div class="visual-proof">
+      <p id="visual_proof">Vídeos luxuosos, cinematográficos, 4K, prontos para viralizar</p>
+      <div class="icons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png" alt="Instagram" class="icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_(2019).png/1024px-Facebook_Logo_(2019).png" alt="Facebook" class="icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_(2017).svg/1024px-YouTube_full-color_icon_(2017).svg.png" alt="YouTube Shorts" class="icon">
+      </div>
+      <p id="used_by">Usado diariamente por criadores e marketers em todo o mundo</p>
+    </div>
 
-<!-- CABEÇALHO + PERFIL -->
-<header>
-  <img src="https://i.imgur.com/IO8PnqT.jpeg" class="profile-img" alt="Foto de Perfil">
-  <div class="logo-title">MENTALIDADE MILIONÁRIA</div>
-</header>
+    <ul class="benefits" id="benefits">
+      <li class="benefit">Vídeos virais de luxo em 4K prontos para uso</li>
+      <li class="benefit">Perfeito para conteúdo com IA e perfis sem rosto</li>
+      <li class="benefit">Economize horas de criação</li>
+      <li class="benefit">Funciona em todo o mundo</li>
+      <li class="benefit">Faça upload e monetize instantaneamente</li>
+    </ul>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>A Virada Que Muda Tudo</h1>
-  <p>Método direto, poderoso e impossível de ignorar.  
-  Disciplina, mentalidade e execução diária.</p>
-  <button class="btn-main" onclick="document.getElementById('planos').scrollIntoView({behavior:'smooth'})">
-    Quero Começar →
-  </button>
-</section>
+    <div class="price-anchor">
+      <div class="old-price" id="old_price">Era $9,90</div>
+      <div class="new-price" id="new_price">Hoje: $1,99</div>
+      <div class="urgency" id="urgency">Pagamento único • Acesso instantâneo</div>
+    </div>
 
-<!-- POR QUE FUNCIONA -->
-<section id="porque">
-  <h2>Por Que Funciona</h2>
-  <ul>
-    <li>Constrói disciplina mesmo nos dias difíceis.</li>
-    <li>Estratégias reais de execução, não motivação vazia.</li>
-    <li>Rotina simples com impacto grande e rápido.</li>
-    <li>Alinha mente + hábitos + foco diário.</li>
-    <li>Funciona para empreendedores, criadores e iniciantes.</li>
-  </ul>
-</section>
+    <a href="https://digitalist0728.gumroad.com/l/bqxhm" class="buy-button" id="button">Obter Acesso Instantâneo • Comece Hoje por $1,99 – Urgente, Antes que Acabe!</a>
+    <p class="sub-button" id="sub_button"> •<span style="color:#ff0000; font-weight:bold;"></span></p>
 
-<!-- RESULTADOS -->
-<section id="resultados">
-  <h2>Resultados Reais (Ilustrações)</h2>
-  <img src="https://i.imgur.com/Tvrz6xg.jpeg" class="result-img">
-  <img src="https://i.imgur.com/yf3NgKY.jpeg" class="result-img">
-  <img src="https://i.imgur.com/DN3pE75.jpeg" class="result-img">
-</section>
+    <p class="final-urgency" id="final_urgency1">Este preço não ficará em $0,99/p>
+    <p class="final-urgency" id="final_urgency2">Quando o timer acabar, o preço volta para $6,99</p>
+    <a href" class="repeat-button" id="repeat_button">Obter Acesso Instantâneo • Comece Hoje por $0,99 – <span style="color:#ff0000; font-weight:bold;">OFERTA ESGOTADA</span>!</a>
 
-<!-- PLANOS -->
-<section id="planos">
-  <h2>Escolha Sua Evolução</h2>
-
-  <div class="card-plan">
-    <h3>🔥 Oferta Principal — Método Completo</h3>
-    <div class="price">R$ 29,98</div>
-    <p>O método completo para transformar sua mentalidade e rotina.</p>
-    <a class="btn-plan" onclick="trackClick('Oferta Principal')" href="https://pay.cakto.com.br/4vmoudi_591503" target="_blank">
-      Acessar Agora
-    </a>
+    <div class="footer">
+      <p id="footer1">Produto digital • Entrega instantânea</p>
+      <p id="footer2">Para fins educacionais e criação de conteúdo</p>
+    </div>
   </div>
 
-  <div class="card-plan">
-    <h3>💎 Mini Oferta — Começo Rápido</h3>
-    <div class="price">R$ 19,98</div>
-    <p>Início imediato, passos essenciais e execução clara.</p>
-    <a class="btn-plan" onclick="trackClick('Mini Oferta')" href="https://pay.cakto.com.br/oe665n9" target="_blank">
-      Começar Agora
-    </a>
-  </div>
+  <div class="notification" id="notification"></div>
 
-  <div class="card-plan">
-    <h3>🚀 Pack de Vídeos Motivacionais</h3>
-    <div class="price">R$ 9,99</div>
-    <p>Motivação visual para manter disciplina diária.</p>
-    <a class="btn-plan" onclick="trackClick('Pack Videos')" href="https://pay.cakto.com.br/3dqovsu_546062" target="_blank">
-      Baixar Agora
-    </a>
-  </div>
-</section>
+  <script>
+    // Translations
+    const translations = {
+      pt: {
+        timer_above: 'Oferta Relâmpago – Preço Aumenta em Breve',
+        headline: 'Transforme Vídeos Virais de Luxo em Renda',
+        subheadline: 'Sem Aparecer. Sem Experiência. Apenas Conteúdo Viral. Aproveite esta oportunidade única antes que expire e transforme sua presença online em uma máquina de dinheiro!',
+        visual_proof: 'Vídeos luxuosos, cinematográficos, 4K, prontos para viralizar',
+        used_by: 'Usado diariamente por criadores e marketers em todo o mundo',
+        benefits: [
+          'Vídeos virais de luxo em 4K prontos para uso',
+          'Perfeito para conteúdo com IA e perfis sem rosto',
+          'Economize horas de criação',
+          'Funciona em todo o mundo',
+          'Faça upload e monetize instantaneamente'
+        ],
+        old_price: 'Era $9,90',
+        new_price: 'Hoje: $1,99',
+        urgency: 'Pagamento único • Acesso instantâneo',
+        button: 'Obter Acesso Instantâneo • Comece Hoje por $1,99 – Urgente, Antes que Acabe!',
+        sub_button: 'Vagas limitadas • Oferta terminando em breve',
+        final_urgency1: 'Este preço não ficará em $1,99',
+        final_urgency2: 'Quando o timer acabar, o preço volta para $9,90',
+        footer1: 'Produto digital • Entrega instantânea',
+        footer2: 'Para fins educacionais e criação de conteúdo'
+      },
+      en: {
+        timer_above: 'Flash Offer – Price Increases Soon',
+        headline: 'Turn Viral Luxury Videos Into Income',
+        subheadline: 'No Face. No Experience. Just Viral Content. Seize this unique opportunity before it expires and transform your online presence into a money machine!',
+        visual_proof: 'Luxurious, cinematic, 4K videos ready to go viral',
+        used_by: 'Used daily by creators and marketers worldwide',
+        benefits: [
+          'Viral-ready luxury videos in 4K',
+          'Perfect for AI content & faceless profiles',
+          'Save hours of creation',
+          'Works worldwide',
+          'Upload and monetize instantly'
+        ],
+        old_price: 'Was $19.90',
+        new_price: 'Today: $9.90',
+        urgency: 'One-time payment • Instant access',
+        button: 'Get Instant Access • Start Today for $9.90 – Urgent, Before It's Gone!',
+        sub_button: 'Limited spots • Offer ending soon',
+        final_urgency1: 'This price will not stay at $9.90',
+        final_urgency2: 'Once the timer ends, the price goes back to $19.90',
+        footer1: 'Digital product • Instant delivery',
+        footer2: 'For educational and content creation purposes'
+      },
+      es: {
+        timer_above: 'Oferta Relámpago – El Precio Aumenta Pronto',
+        headline: 'Transforma Videos Virales de Lujo en Ingresos',
+        subheadline: 'Sin Mostrar la Cara. Sin Experiencia. Solo Contenido Viral. ¡Aprovecha esta oportunidad única antes de que expire y transforma tu presencia online en una máquina de dinero!',
+        visual_proof: 'Videos lujosos, cinematográficos, 4K, listos para viralizarse',
+        used_by: 'Usado diariamente por creadores y marketers en todo el mundo',
+        benefits: [
+          'Videos virales de lujo en 4K listos para usar',
+          'Perfecto para contenido con IA y perfiles sin rostro',
+          'Ahorra horas de creación',
+          'Funciona en todo el mundo',
+          'Sube y monetiza instantáneamente'
+        ],
+        old_price: 'Era €19,90',
+        new_price: 'Hoy: €9,90',
+        urgency: 'Pago único • Acceso instantáneo',
+        button: 'Obtener Acceso Instantáneo • Comienza Hoy por €9,90 – ¡Urgente, Antes de que Termine!',
+        sub_button: 'Plazas limitadas • Oferta terminando pronto',
+        final_urgency1: 'Este precio no se quedará en €9,90',
+        final_urgency2: 'Cuando el temporizador termine, el precio vuelve a €19,90',
+        footer1: 'Producto digital • Entrega instantánea',
+        footer2: 'Para fines educativos y creación de contenido'
+      }
+    };
 
-<footer>
-  © 2025 • Mentalidade Milionária — Todos os direitos reservados.
-</footer>
+    // Detect language
+    function detectLanguage() {
+      const langCode = navigator.language.split('-')[0];
+      const lang = translations[langCode] ? langCode : 'en';
+      const trans = translations[lang];
+      document.getElementById('timer_above').innerText = trans.timer_above;
+      document.getElementById('headline').innerText = trans.headline;
+      document.getElementById('subheadline').innerText = trans.subheadline;
+      document.getElementById('visual_proof').innerText = trans.visual_proof;
+      document.getElementById('used_by').innerText = trans.used_by;
+      const benefitLis = document.querySelectorAll('.benefit');
+      benefitLis.forEach((li, i) => li.innerText = trans.benefits[i]);
+      document.getElementById('old_price').innerText = trans.old_price;
+      document.getElementById('new_price').innerText = trans.new_price;
+      document.getElementById('urgency').innerText = trans.urgency;
+      document.getElementById('button').innerText = trans.button;
+      document.getElementById('sub_button').innerText = trans.sub_button;
+      document.getElementById('final_urgency1').innerText = trans.final_urgency1;
+      document.getElementById('final_urgency2').innerText = trans.final_urgency2;
+      document.getElementById('repeat_button').innerText = trans.button;
+      document.getElementById('footer1').innerText = trans.footer1;
+      document.getElementById('footer2').innerText = trans.footer2;
+    }
 
+    // Timer
+    const saved = localStorage.getItem('offerTimer');
+    let endTime = saved ? parseInt(saved) : Date.now() + (5 + Math.floor(Math.random() * 11)) * 60000; // 5-15 min for high urgency
+    if (!saved) localStorage.setItem('offerTimer', endTime);
+    const timerInterval = setInterval(() => {
+      const diff = endTime - Date.now();
+      if (diff <= 0) {
+        clearInterval(timerInterval);
+        document.getElementById('timer').innerText = '00:00';
+        return;
+      }
+      const m = Math.floor(diff / 60000).toString().padStart(2, '0');
+      const s = Math.floor((diff % 60000) / 1000).toString().padStart(2, '0');
+      document.getElementById('timer').innerText = m + ':' + s;
+    }, 1000);
+
+    // Notifications
+    const names = ['Michael', 'Lucas', 'Sofia', 'Juan', 'Emma', 'Pedro', 'Ana', 'Carlos', 'Julia', 'David'];
+    const countries = ['USA', 'Brazil', 'Spain', 'Portugal', 'Canada'];
+    let usedNames = [];
+    function showNotification() {
+      if (usedNames.length === names.length) usedNames = [];
+      let name;
+      do { name = names[Math.floor(Math.random() * names.length)]; } while (usedNames.includes(name));
+      usedNames.push(name);
+      const country = countries[Math.floor(Math.random() * countries.length)];
+      const notif = document.getElementById('notification');
+      notif.innerHTML = `${name} from ${country} just purchased!`;
+      notif.classList.add('show');
+      setTimeout(() => { notif.classList.remove('show'); }, 4000);
+    }
+    setTimeout(() => {
+      showNotification();
+      setInterval(showNotification, 15000 + Math.random() * 15000);
+    }, 5000);
+  </script>
 </body>
 </html>
+<!-- SOCIAL PROOF CAROUSEL -->
+<style>
+  .social-proof-carousel {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 40px auto;
+    background: #000;
+    padding: 20px 0;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 16px;
+    animation: scroll 40s linear infinite;
+  }
+
+  .carousel-track img {
+    height: 320px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .carousel-track img {
+      height: 240px;
+    }
+  }
+</style>
+
+<div class="social-proof-carousel">
+  <div class="carousel-track">
+    <!-- IMAGES (duplicated for smooth loop) -->
+    <img src="https://github.com/user-attachments/assets/15de3c5c-7d81-4c19-98dd-add5111257b2">
+    <img src="https://github.com/user-attachments/assets/307d0280-b238-4f28-8205-41640ed9ff4a">
+    <img src="https://github.com/user-attachments/assets/81148523-7e97-42dc-a921-7f60a1294b5f">
+    <img src="https://github.com/user-attachments/assets/ee06909d-81be-4f34-9dc6-9385f7a15469">
+    <img src="https://github.com/user-attachments/assets/c99f7427-ae73-40bb-8eab-d1de0bee9ab7">
+    <img src="https://github.com/user-attachments/assets/2708cfb6-1e5f-4b98-8a57-ffee9c09fa56">
+    <img src="https://github.com/user-attachments/assets/acc4865a-c47f-4b02-b8df-24d6efd005ce">
+
+    <!-- DUPLICATE FOR LOOP -->
+    <img src="https://github.com/user-attachments/assets/15de3c5c-7d81-4c19-98dd-add5111257b2">
+    <img src="https://github.com/user-attachments/assets/307d0280-b238-4f28-8205-41640ed9ff4a">
+    <img src="https://github.com/user-attachments/assets/81148523-7e97-42dc-a921-7f60a1294b5f">
+    <img src="https://github.com/user-attachments/assets/ee06909d-81be-4f34-9dc6-9385f7a15469">
+    <img src="https://github.com/user-attachments/assets/c99f7427-ae73-40bb-8eab-d1de0bee9ab7">
+    <img src="https://github.com/user-attachments/assets/2708cfb6-1e5f-4b98-8a57-ffee9c09fa56">
+    <img src="https://github.com/user-attachments/assets/acc4865a-c47f-4b02-b8df-24d6efd005ce">
+  </div>
+</div>
